@@ -20,7 +20,7 @@
 
 buildPythonPackage rec {
   pname = "flit";
-  version = "0.11.4";
+  version = "0.13";
   name = "${pname}-${version}";
 
 #   format = "wheel";
@@ -28,7 +28,7 @@ buildPythonPackage rec {
   src = fetchPypi {
     inherit pname version;
 #     url = https://files.pythonhosted.org/packages/24/98/50a090112a04d9e29155c31a222637668b0a4dd778fefcd3132adc50e877/flit-0.10-py3-none-any.whl;
-    sha256 = "8ba7603cc3bf4149d81811d40fe331abc45ff37a207c63f5f712a0fdb69297bb";
+    sha256 = "26bf9a3a9b743fed085420b4eed24f78341c0d2103a5f726980f7e7750400e81";
   };
 
   disabled = !isPy3k;

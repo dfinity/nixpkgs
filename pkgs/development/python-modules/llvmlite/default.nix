@@ -11,13 +11,13 @@
 buildPythonPackage rec {
   pname = "llvmlite";
   name = "${pname}-${version}";
-  version = "0.20.0";
+  version = "0.21.0";
 
   disabled = isPyPy;
 
   src = fetchurl {
     url = "mirror://pypi/${builtins.substring 0 1 pname}/${pname}/${name}.tar.gz";
-    sha256 = "b2f174848df16bb9195a07fec102110a06d018da736bd9b3570a54d44c797c29";
+    sha256 = "3a5dd0695fdfb9fd47464cd71791b84935bf9642e11f4811d57aa1f2da8cdaa8";
   };
 
   propagatedBuildInputs = [ llvm ] ++ stdenv.lib.optional (pythonOlder "3.4") enum34;

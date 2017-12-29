@@ -11,12 +11,12 @@
 
 buildPythonPackage rec {
   pname = "jupyter_core";
-  version = "4.3.0";
+  version = "4.4.0";
   name = "${pname}-${version}";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "a96b129e1641425bf057c3d46f4f44adce747a7d60107e8ad771045c36514d40";
+    sha256 = "ba70754aa680300306c699790128f6fbd8c306ee5927976cbe48adacf240c0b7";
   };
 
   buildInputs = [ pytest mock glibcLocales ];

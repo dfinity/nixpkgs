@@ -2,12 +2,12 @@
 
 buildPythonPackage rec {
   pname = "pycollada";
-  version = "0.5";
+  version = "0.6";
   name = "${pname}-${version}";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "1g96maw2c25l4i3ks51784h33zf7s18vrn6iyz4ca34iy4sl7yq9";
+    sha256 = "fcd6f38fd981e350f9ec754d9671834017accd600e967d6d299a6cfdae5ba4f4";
   };
 
   buildInputs = [ numpy ] ++ (if isPy3k then [dateutil] else [dateutil_1_5]);

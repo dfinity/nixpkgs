@@ -9,11 +9,11 @@
 
 if !(pythonOlder "3.4") then null else buildPythonPackage rec {
   pname = "pathlib2";
-  version = "2.2.1";
+  version = "2.3.0";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "ce9007df617ef6b7bd8a31cd2089ed0c1fed1f7c23cf2bf1ba140b3dd563175d";
+    sha256 = "d32550b75a818b289bd4c1f96b60c89957811da205afcceab75bc8b4857ea5b3";
   };
 
   propagatedBuildInputs = [ six ] ++ lib.optional (pythonOlder "3.5") scandir;
